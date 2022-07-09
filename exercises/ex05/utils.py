@@ -1,9 +1,10 @@
-"""List utility functions"""
+"""List utility functions!"""
 
 __author__ = "73062090"
 
 
 def only_evens(evens: list[int]) -> list[int]:
+    """Returns only the even numbers from a given list."""
     evens_list = list()
     for match in evens:
         if match % 2 == 0:
@@ -12,6 +13,7 @@ def only_evens(evens: list[int]) -> list[int]:
 
 
 def is_equal(list_1: list[int], list_2: list[int]) -> bool:
+    """Returns True if two lists match each other exactly, otherwise returns False."""
     if len(list_1) != len(list_2):
         return False
     i: int = 0
@@ -23,6 +25,7 @@ def is_equal(list_1: list[int], list_2: list[int]) -> bool:
 
 
 def sub(main_list: list[int], index_1: int, index_2: int) -> list[int]:
+    """Returns a subset of a inputted list between 2 inputted indexes."""
     sub_list = list()
     if len(main_list) == 0 or index_1 > len(main_list) or index_2 <= 0:
         return sub_list
@@ -34,4 +37,3 @@ def sub(main_list: list[int], index_1: int, index_2: int) -> list[int]:
         sub_list.append(main_list[index_1])
         index_1 += 1
     return sub_list
-
