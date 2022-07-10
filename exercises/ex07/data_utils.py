@@ -36,3 +36,14 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
     for column in first_row:
         result[column] = column_values(row_table, column)
     return result
+
+def head(data_table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
+    empty_dict = {}
+    for item in data_table:
+        empty_list = []
+        i = 0
+        while i < row_num:
+            empty_list.append(item[0])
+            i += 1
+        empty_dict.append(item[empty_list])
+    return empty_dict
